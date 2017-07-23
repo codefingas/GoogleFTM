@@ -40,4 +40,5 @@ footer ul a:hover {
 .git_link{
 	font-size: 50px;
 	margin: 0 auto;
+	float: right;
 }

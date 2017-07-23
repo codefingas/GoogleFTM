@@ -1,7 +1,7 @@
 # GoogleFTM
 A File Transfer Manager for Google -- with love NODEjs
 
-<img src="https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/20245805_1501354053263517_558912849685653346_n.jpg?oh=5caa20e09754d68319963c1aff244867&oe=59EF62BD">
+<img src="./assets/img/googleFTM.jpg">
 
 <h3>Disclaimer</h3>
 Regardless of its logo similarity and its name <h2>GoogleFTM</h2>

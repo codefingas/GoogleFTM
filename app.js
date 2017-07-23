@@ -20,6 +20,16 @@ app.get('/', function (req, res) {
 });
 /*==End of routing the app==*/
 
+/*==Setting app route variable==*/
+var authRoutes = require('./routes/auth');
+/*==End of setting the app route variable==*/
+
+/*==Linking routes to their variables==*/
+app.use('/auth', authRoutes);
+/*==End of Linking routes to their variables==*/
+
+
+
 /*==Giving the app a port==*/
 app.listen(process.env.port || 9000, function () {
 	'use strict';
