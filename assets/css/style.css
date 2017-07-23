@@ -1,0 +1,39 @@
+body{
+	background-color: #000000;
+	color: white;
+	overflow-x: hidden;
+}
+.landing{
+	height: 650px;
+}
+footer ul {
+	display: inline-block;
+	list-style: none;
+}
+footer ul a:hover {
+	color: lightgreen;
+	text-decoration: none;
+}
+.welcome_logo{
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	padding-top: 100px;
+}
+.logo_sub{
+	margin: 0 auto;
+	margin-left: 75%;
+	margin-top: -50% !important;
+	font-size: 40px;
+}
+.logo{
+	
+}
+.intro_text{
+	padding-top: 100px;
+	font-size: 20px;
+}
+.login_img{
+	margin: 0 auto;
+}
