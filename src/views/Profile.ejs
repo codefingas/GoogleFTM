@@ -3,7 +3,12 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Profile</title>
+    <title><%=user.username%> | GoogleFTM</title>
+	<link rel="icon" href="../../assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/font_awesome/css/font-awesome.min.css">
+	  <link rel="stylesheet" type="text/css" href="../assets/css/singleView.css">
   </head>
   <body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -15,18 +20,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">Home</a>
+      <a href="/" class="navbar-brand"><img src="../../assets/img/google.png" width="70px"><span class="small_logo">FTM</span></a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-
-      </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+			<img class="img-circle" src="#" alt="img from profile">
           <ul class="dropdown-menu" style="padding:12px;">
             <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+              <img alt="profile img" src="#" placeholder="picture from profile">
             </form>
           </ul>
         </li>
@@ -39,7 +41,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h1><%=title%>
+        <h1>
           <p class="lead"></p>
         </h1>
       </div>
@@ -74,55 +76,58 @@
       
       <div class="panel">
         <div class="panel-body">
-          
+          <div class="container-fluid">
+			  <div class="row">
+				  <div class="col-sm-1 col-md-1">
+				  	  <div class="profle_info text-center">
+						  <a class="story-title" href="#"><img alt="profile picture" src="#" style="width:100px; height:100px"></a>
+						  <br/>
+						  <h4>Hello! <%=user.username%></h4>
+						  <br/>
+					  </div>
+				  </div>
+				  <div class="col-sm-3 col-md-3 text-center">
+					  <form class="form_upload" enctype="multipart/form-data"  action="/users/upload" method="post">
+						  <input type="text" name="userEmail" value="<%=user.email%>" class="hidden_form">
+						  <input type="text" name="userPassword" value="<%=user.password%>" class="hidden_form">
+						  <input class="btn" id="file" name="file" type="file">
+						  <input name="reciever" type="email" id="reciepient_email" placeholder="Reciepient's Email" required="required"><br/>
+						  <br/>
+						  <input name="title" type="text" placeholder="Title of item" required="required"><br/><br/>
+						  <input type='text' placeholder="Item name would go here" title="Field Text cannot be changed" id="file_name" name="filename" readonly="readonly"><br/><br/>
+						  <textarea name="description" placeholder="Description of Items" required="required"></textarea><br/>
+						  <br/>
+						  <input type="submit" class="btn btn-danger" value="SEND">
+ 					  </form>
+				  </div>
+				  <div class="col-sm-8 col-md-8 text-center">
+					  <h3>Shared files history and to whom would go here</h3>
+				  </div>
+			  </div>
+		  </div>
           
           
           <!--/stories-->
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="book name" src="#" style="width:100px;height:100px"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3>title</h3>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default">author</span></h4><h4>
-                  </h4></div>
-                <div class="col-xs-3"></div>
-              </div>
-              <br>Book Description<br>
             </div>
           </div>
-          <hr>
           <!--/stories-->
-          
-          
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
         
-          
         </div>
       </div>
-                                                                                       
-                                                  
-                                                      
+                                                    
     </div><!--/col-12-->
   </div>
 </div>
-                                                
-                                                                                
-<hr>
-
+         
 <div class="container" id="footer">
   <div class="row">
     <div class="col col-sm-12">
       
-      <h1>Follow Us</h1>
-      <div class="btn-group">
-       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-     <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-     <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
-      </div>
       
     </div>
   </div>
@@ -144,12 +149,11 @@
         </ul>
         
       </div>
-      <div class="col-sm-6">
-          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
-      </div>
     </div>
   </div>
 </footer>
   <!-- script references -->
+	  <script src="../assets/plugins/jquery.js"></script>
+	  <script src="../assets/js/main.js"></script>
   </body>
 </html>

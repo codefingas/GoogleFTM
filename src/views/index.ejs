@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="refresh" content="">
 	 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compactible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,30 +12,44 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 	<body>
-<!--		section for the landing page-->
+<!--section for the landing page-->
 		<section class="landing">
 			<div class="container-fluid">
 				<div class="row">
-						<a class="git_link text-center" href="https://github.com/attaab/GoogleFTM/"><i class="fa fa-github"></i></a>
-					<div class="welcome_logo img-responsive">
-						<div class="logo">
-							<img class="img-responsive" alt="google FTM logo" src="./assets/img/google.png">
-							<span class="logo_sub">FTM</span>
-							</div>
-						</div>
-					<br/>
-					<br/>
-					<p class="text-center">
-						<span class="intro_text">
-						<span>a fast, robust, Email</span><br/> FILE TRANSFER MANAGER<br/> exclusive to Gmail users
-						</span>
-						<br/>
-						<br/>
-						<a href="#"><img class="login_img img-responsive" src="./assets/img/signin.png" width="250px" height="50px"></a>
-					</p>
+						<a class="git_link text-center" href="https://github.com/attaab/GoogleFTM/" target="_blank"><i class="fa fa-github"></i></a>
+					<form method="post" class="login" action="/auth/signIn">
+					<input type="text" name="username" style="color: black;" placeholder="Username" required/>
+						<input type="password" style="color: black;" name="password" placeholder="Password" required/>
+						<input type="submit" style="color: black;" value="login" />
+					</form>
 				</div>
+			</div
+		</section>
+		<section>
+			<div class="welcome_logo img-responsive">
+					<div class="logo">
+						<img class="img-responsive" alt="google FTM logo" src="./assets/img/google.png">
+						<span class="logo_sub">FTM</span>
+						</div>
+					</div>
+				<br/>
+				<br/>
+				<p class="text-center">
+					<span class="intro_text">
+					<span>A Fast, Robust, Email</span><br/> FILE TRANSFER MANAGER<br/> exclusive to Gmail users
+					</span>
+					<br/>
+					<br/>
+					<form class="text-center" action="#" method="post">
+						<button class="login_btn" type="submit" name="logIn" ><img class="login_img img-responsive" src="./assets/img/signin.png" width="250px" height="50px"></button>
+					</form>
+				</p>
 			</div>
-		</section><hr>
+		</section>
+		<br/>
+		<br/>
+		<br/>
+		<hr>
 <!--		End of section for the landing page-->
 		
 		

@@ -1,38 +1,63 @@
 /*jslint node:true */
 var express = require('express'),
-    app = express();
+    bodyParser = require('body-parser'),
+    app = express(),
+	http = require('http'),
+	upload = require('express-fileupload'),
+	cookieParser = require('cookie-parser'),
+	passport = require('passport'),
+	session = require('express-session'),
 
+/*==Setting app route variable and middleware==*/
+	authRoutes = require('./src/routes/auth')(),
+	userRoutes = require('./src/routes/users');
+
+/*==using EJS as default rendering Engine==*/
+app.set('views', './src/views');
+app.set('view engine', 'ejs');
+/*==End of using EJS as default rendering Engine==*/
+
+app.use('/Auth', authRoutes);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(cookieParser());
+app.use(session({secret: 'googleftm', resave: true, saveUninitialized: true}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use('/users', userRoutes);
+	/*==requiring the passport.js configuration==*/
+		require('./src/config/socialAuth')(app);
+	/*==End of requiring the passport.js configuration==*/
+/*==End of setting the app route variable==*/
 
 /*==Setting the app to recieve the assets folder as a static file==*/
 app.use('/assets', express.static('assets'));
 app.use(express.static('./assets'));
+app.use(upload());
 /*==End of Setting the app to recieve the assets folder as a static file==*/
 
-/*==using EJS as default rendering Engine==*/
-app.set('views', './views')
-app.set('view engine', 'ejs');
-/*==End of using EJS as default rendering Engine==*/
+
 
 /*==Routing the app==*/
 app.get('/', function (req, res) {
 	'use strict';
-	res.render('index');
+	res.render('failure');
 });
 /*==End of routing the app==*/
 
-/*==Setting app route variable==*/
-var authRoutes = require('./routes/auth');
-/*==End of setting the app route variable==*/
-
-/*==Linking routes to their variables==*/
-app.use('/auth', authRoutes);
-/*==End of Linking routes to their variables==*/
-
+/*==Creating file post routes==*/
+app.post("/upload", function (req, res) {
+	if (req.files) {
+		console.log(req.files);
+		console.log(req.body);
+	};
+});
+/*==End of Creating file post routes==*/
 
 
 /*==Giving the app a port==*/
-app.listen(process.env.port || 9000, function () {
+app.listen(process.env.port || 8000, function () {
 	'use strict';
-	console.log('s3rv3r @#$% on @: ' + process.env.port + ' || 9000');
+	console.log('s3rv3r @#$% on @: ' + process.env.port + ' || 8000');
 });
 /*==End of giving the app a port==*/

@@ -2,6 +2,8 @@ body{
 	background-color: #000000;
 	color: white;
 	overflow-x: hidden;
+	margin: 0;
+	font-size: 12px;
 }
 .landing{
 	height: 650px;
@@ -23,7 +25,7 @@ footer ul a:hover {
 }
 .logo_sub{
 	margin: 0 auto;
-	margin-left: 75%;
+	margin-left: 73%;
 	margin-top: -50% !important;
 	font-size: 40px;
 }
@@ -34,11 +36,40 @@ footer ul a:hover {
 	padding-top: 100px;
 	font-size: 20px;
 }
+.login_btn{
+	border: 0px;
+	padding: 0px;
+	text-align: center !important;
+	
+}
 .login_img{
-	margin: 0 auto;
+	margin: 0 auto !important;
 }
 .git_link{
 	font-size: 50px;
 	margin: 0 auto;
 	float: right;
 }
+.row {
+	margin: 0px !important;
+}
+.login{
+	float: right;
+	font-size: 14px;
+	margin-right: 20px;
+	padding-top: 20px;
+}
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+.register_class{
+	font-size: 20px;
+}
+.hidden_form{
+	display: none;
+}
+
+@media screen and (max-width > 680px) {
+	row: 0px;
+};
