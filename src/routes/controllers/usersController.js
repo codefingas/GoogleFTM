@@ -13,7 +13,17 @@ var express = require('express'),
     
 module.exports = (function () {
 	'use strict';
-	var uploadForm, getProfile, signup;
+	var uploadForm, getProfile, signup, middleware;
+	
+	/*==Creating security for routes==*/
+	middleware = function (req, res, next) {
+		if (!req.user) {
+			res.redirect('/');
+		}
+		next();
+	};
+	/*==End of Creating security for routes==*/
+	
 	
 	/*==Routing the profile page==*/
 	getProfile = function (req, res) {
@@ -28,7 +38,7 @@ module.exports = (function () {
 	/*==Testing the sign up function in users==*/
 	signup = function (req, res) {
 		console.log('request from signup:-' + req.body);
-		var url = 'mongodb://localhost:27017/googleftm';
+		var url = 'mongodb://googleftm:conven3ntmlabgoogleftm@ds015859.mlab.com:15859/googleftm';
 		mongodb.connect(url, function (err, db) {
 			var collection = db.collection('users'),
 				user = {
@@ -86,6 +96,7 @@ module.exports = (function () {
 	return {
 		uploadForm: uploadForm,
 		getProfile: getProfile,
-		signup: signup
+		signup: signup,
+		middleware: middleware
 	};
 }());

@@ -45,14 +45,7 @@ app.get('/', function (req, res) {
 });
 /*==End of routing the app==*/
 
-/*==Creating file post routes==*/
-app.post("/upload", function (req, res) {
-	if (req.files) {
-		console.log(req.files);
-		console.log(req.body);
-	};
-});
-/*==End of Creating file post routes==*/
+
 
 
 /*==Giving the app a port==*/

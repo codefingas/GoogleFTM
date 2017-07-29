@@ -12,11 +12,12 @@ var express = require('express'),
 
 module.exports = (function () {
 	'use strict';
-	userRoute.use(upload());
 	/*==pulling  the controller for userRoute==*/
 	var controller = require('./controllers/usersController');
 	/*==End of pulling the controller==*/
 	
+	/*==Triggering the upload function for ==*/
+	userRoute.use(upload());
 	/*==Routing the sign up process==*/
 	userRoute.route('/signup')
 		.post(controller.signup);
@@ -24,6 +25,12 @@ module.exports = (function () {
 	
 	/*==routing to the Profile==*/
 	userRoute.route('/profile')
+		.all(function (req, res, next) {
+			if (!req.user) {
+				res.redirect('/');
+			};
+			next();
+		})
 		.get(controller.getProfile);
 	/*==End of routing to the profile==*/
 	
