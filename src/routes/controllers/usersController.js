@@ -48,14 +48,12 @@ module.exports = (function () {
 	
 	/*==The multipart form controller==*/
 	uploadForm = function (req, res) {
-		res.send('Email Sent');
-		console.log(req.body);
 		var file = req.files,
 			data = req.body,
 			transporter,
 			mailOptions;
 		transporter = nodemailer.createTransport({
-			service: 'gmail',
+			service : 'gmail',
 			auth: {
 				user: data.userEmail,
 				pass: data.userPassword
@@ -76,8 +74,10 @@ module.exports = (function () {
 		transporter.sendMail(mailOptions, function (error, info) {
 			if (error) {
 				console.log(error);
+				res.send('there was a problem sending Mail please go back and resend');
 			} else {
 				console.log('Email sent! ' + info.response);
+				res.send('Email Sent');
 			}
 		});
 	};

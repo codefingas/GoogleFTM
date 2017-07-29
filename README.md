@@ -4,12 +4,12 @@ A File Transfer Manager for Google -- with love NODEjs
 <img style='align-content: center;' src="./assets/img/googleFTM.jpg" width="888px">
 
 <h3>Installation</h3>
-$ git clone https://github.com/attaab/GoogleFTM.git
-$ cd GoogleFTM
-$ npm install
-$ npm start
+$ git clone https://github.com/attaab/GoogleFTM.git<br>
+$ cd GoogleFTM<br>
+$ npm install<br>
+$ npm start<br>
 
-then 
+then <br>
 click <a href="http://localhost:8000/">Here</a>
 
 

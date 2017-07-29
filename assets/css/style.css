@@ -66,9 +66,6 @@ a:hover {
 .register_class{
 	font-size: 20px;
 }
-.hidden_form{
-	display: none;
-}
 
 @media screen and (max-width > 680px) {
 	row: 0px;
