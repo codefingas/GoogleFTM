@@ -28,7 +28,7 @@ module.exports = (function () {
 		.all(function (req, res, next) {
 			if (!req.user) {
 				res.redirect('/');
-			};
+			}
 			next();
 		})
 		.get(controller.getProfile);
@@ -36,6 +36,12 @@ module.exports = (function () {
 	
 	/*==Routing the upload==*/
 	userRoute.route('/upload')
+		.all(function (req, res, next) {
+			if (!req.user) {
+				res.redirect('/');
+			}
+			next();
+		})
 		.post(urlencodedParser, controller.uploadForm);
 	/*==End of routing the upload==*/
 	

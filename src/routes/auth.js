@@ -13,6 +13,12 @@ var router = function () {
 	
 	/*==signin method==*/
 	authRoute.route('/signIn')
+		.all(function (req, res, next) {
+			if (!req.user) {
+				res.redirect('/');
+			}
+			next();
+		})
 		.post(passport.authenticate('local', {
 			failureRedirect: "/auth/registerFail"
 		}), function (req, res) {
@@ -22,6 +28,12 @@ var router = function () {
 	
 	/*==routing to the registerfail page==*/
 	authRoute.route('/registerFail')
+		.all(function (req, res, next) {
+			if (!req.user) {
+				res.redirect('/');
+			}
+			next();
+		})
 		.get(authContoller.failure);
 	/*==End of routing to the registerfail page==*/
 	
