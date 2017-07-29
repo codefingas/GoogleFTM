@@ -6,7 +6,7 @@ var express = require('express'),
 	upload = require('express-fileupload'),
 	cookieParser = require('cookie-parser'),
 	passport = require('passport'),
-	session = require('cookie-session'),
+	session = require('express-session'),
 
 /*==Setting app route variable and middleware==*/
 	authRoutes = require('./src/routes/auth')(),
