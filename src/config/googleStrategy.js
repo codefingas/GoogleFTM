@@ -13,7 +13,7 @@ module.exports = function () {
 	},
 	//====implementing the local strategy function===
 	    function (username, password, done) {
-		    var url = 'mongodb://localhost:27017/GoogleFTM';
+		    var url = 'mongodb://googleftm:conven3ntmlabgoogleftm@ds015859.mlab.com:15859/googleftm';
 		    mongodb.connect(url, function (err, db) {
 			    var collection = db.collection('users');
 			    collection.findOne({username: username},
