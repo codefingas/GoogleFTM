@@ -51,6 +51,6 @@ app.get('/', function (req, res) {
 /*==Giving the app a port==*/
 app.listen(process.env.PORT || 8000, function () {
 	'use strict';
-	console.log('s3rv3r @#$% on @: ' + process.env.port + ' || 8000');
+	console.log('s3rv3r @#$% on @: ' + process.env.PORT + ' || 8000');
 });
 /*==End of giving the app a port==*/
