@@ -13,7 +13,6 @@ var express = require('express'),
 	userRoutes = require('./src/routes/users');
 
 /*==using EJS as default rendering Engine==*/
-app.set('views', './src/views');
 app.set('view engine', 'ejs');
 /*==End of using EJS as default rendering Engine==*/
 
