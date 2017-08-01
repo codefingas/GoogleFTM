@@ -2,7 +2,7 @@
 A File Transfer Manager for Google -- with love NODEjs
 <a href="https://googleftm.herokuapp.com/">Link to Live App...</a>
 
-<img style='align-content: center;' src="./assets/img/googleFTM.jpg" width="888px">
+<img href="https://googleftm.herokuapp.com/" style='align-content: center;' src="./assets/img/googleFTM.jpg" width="888px">
 
 <h3>Installation</h3>
 $ git clone https://github.com/attaab/GoogleFTM.git<br>
@@ -10,8 +10,6 @@ $ cd GoogleFTM<br>
 $ npm install<br>
 $ npm start<br>
 
-then <br>
-click <a href="http://localhost:8000/">Here</a>
 
 
 
