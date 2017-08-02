@@ -1,6 +1,6 @@
 # GoogleFTM
 A File Transfer Manager for Google -- with love NODEjs
-<a href="https://googleftm.herokuapp.com/">Link to Live App...</a>
+<a href="https://googleftm.herokuapp.com/" target="_blank" >Link to Live App...</a><br/><br/>
 
 <img href="https://googleftm.herokuapp.com/" style='align-content: center;' src="./assets/img/googleFTM.jpg" width="888px">
 
