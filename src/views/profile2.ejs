@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title><%=user.username%> | GoogleFTM</title>
+	<link rel="icon" href="../../assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/font_awesome/css/font-awesome.min.css">
+	  <link rel="stylesheet" type="text/css" href="../assets/css/singleView.css">
+  </head>
+  <body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand"><img src="../../assets/img/google.png" width="70px"><span class="small_logo">FTM</span></a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+			<img class="img-circle" src="#" alt="img from profile">
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <img alt="profile img" src="#" placeholder="picture from profile">
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          <div class="container-fluid">
+			  <div class="row">
+				  <div class="col-sm-1 col-md-1">
+				  	  <div class="profle_info text-center">
+						  <a class="story-title" href="#"><img alt="profile picture" src="#" style="width:100px; height:100px"></a>
+						  <br/>
+						  <h4>Hello! Welcome</h4>
+						  <br/>
+					  </div>
+				  </div>
+				  <div class="col-sm-3 col-md-3 text-center">
+					  <form class="form_upload" enctype="multipart/form-data"  action="/users/upload" method="post">
+						  <input type="text" name="userEmail" value="<%=user.email%>" class="hidden_form">
+						  <input type="text" name="userPassword" value="<%=user.password%>" class="hidden_form">
+						  <input class="btn" id="file" name="file" type="file">
+						  <input name="reciever" type="email" id="reciepient_email" placeholder="Reciepient's Email" required="required"><br/>
+						  <br/>
+						  <input name="title" type="text" placeholder="Title of item" required="required"><br/><br/>
+						  <input type='text' placeholder="Item name would go here" title="Field Text cannot be changed" id="file_name" name="filename" readonly="readonly"><br/><br/>
+						  <textarea name="description" placeholder="Description of Items" required="required"></textarea><br/>
+						  <br/>
+						  <input type="submit" class="btn btn-danger" value="SEND">
+ 					  </form>
+				  </div>
+				  <div class="col-sm-8 col-md-8 text-center">
+					  <h3>Shared files history and to whom would go here</h3>
+				  </div>
+			  </div>
+		  </div>
+          
+          
+          <!--/stories-->
+          <div class="row">    
+            <br>
+            <div class="col-md-2 col-sm-3 text-center">
+            </div>
+            <div class="col-md-10 col-sm-9">
+            </div>
+          </div>
+          <!--/stories-->
+        
+        </div>
+      </div>
+                                                    
+    </div><!--/col-12-->
+  </div>
+</div>
+         
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- script references -->
+	  <script src="../assets/plugins/jquery.js"></script>
+	  <script src="../assets/js/main.js"></script>
+  </body>
+</html>
