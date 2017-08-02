@@ -28,7 +28,7 @@ module.exports = (function () {
 	/*==Routing the profile page==*/
 	getProfile = function (req, res) {
 	//res.json(req.user);
-		res.render('failure', {
+		res.render('profile', {
 			title: 'Profile Page',
 			user: req.user
 		});
